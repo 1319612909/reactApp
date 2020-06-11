@@ -7,6 +7,16 @@ export default class list extends Component{
         comments:PropTypes.array.isRequired,
         deleteFun:PropTypes.func.isRequired
     }
+    // componentDidMount(){
+    //     // 发送ajax,实例
+    //     const url ='https://api.github.com/search/repositories?q=re$sort=stars'
+    //     axios.get(url)
+    //     // .post(url,{})  
+    //     .then(res=>{
+    //         // 处理数据、
+    //         const {name,htmlurl} = res.data.items[0] //解构取值 
+    //     })
+    // }
     render(){
         
         // 可以先把父组件传递过来的保存一下,使用变量把父组件传递的值取出来保存

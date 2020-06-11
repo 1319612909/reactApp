@@ -22,16 +22,17 @@ export default class App extends Component{
         )
     }
 }
-ws
-file->seitings->live Templates->
+
+www.bootcdn.cn //找cdn的地址
+
 
 
 拆分组件
-app{
-   left(add)
-   right(list)->item
-}
-创建组件文件夹（包含 jsx,css）
-componts 建立4个文件夹
+
 className=""
 行内样式：style={{a：‘b’}}
+
+axios,轻量级，推荐使用
+Fetch，老版浏览器不支持，为了兼容，可以引入fetch.js
+使用它 请求后，要。then（ return res.json()）.then
+通过一次的res.json的转换，返回promise对象，才能拿到数据
