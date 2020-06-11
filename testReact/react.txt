@@ -1,0 +1,37 @@
+{ {} }
+
+常用生命周期回调函数
+render()：初始化渲染或更新渲染调用
+componentDidMount() 开启监听，发送ajax（初始化异步操作）
+componentWillUnmount() 做收尾工作，例如清楚定时器
+componentWillReceiveProps () 在组件接收到一个新的 prop (更新后)时被调用。这个方法在初始化render时不会被调用。
+
+回调函数使用箭头函数比较推荐，这样就可以不用bind，this指向问题
+虚拟dom：减少dom操作，
+diff：判断那块需要更新，那块不需新更改，减少更新区域，最小重绘
+
+代码模板制作
+import React,{Component} from 'react'
+export default class App extends Component{
+
+    render(){
+        return(
+            <div>
+                
+            </div>
+        )
+    }
+}
+ws
+file->seitings->live Templates->
+
+
+拆分组件
+app{
+   left(add)
+   right(list)->item
+}
+创建组件文件夹（包含 jsx,css）
+componts 建立4个文件夹
+className=""
+行内样式：style={{a：‘b’}}
