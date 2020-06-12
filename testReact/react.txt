@@ -36,3 +36,23 @@ axios,轻量级，推荐使用
 Fetch，老版浏览器不支持，为了兼容，可以引入fetch.js
 使用它 请求后，要。then（ return res.json()）.then
 通过一次的res.json的转换，返回promise对象，才能拿到数据
+
+//github接口地址
+https://developer.github.com/v3/#   
+
+
+发请求要在哪儿更新状态，就最好在哪个组件内发请求，操作state就方便一些
+
+兄弟组件传值
+兄弟传给父亲，父亲传给另一兄弟
+在父组件写一个方法和设定state的值，设定好入参，把子组件内容传给父组件，赋值给父的state,
+然后通过父把父的state的值，传递给另一个子组件
+
+兄弟组件传值，使用消息订阅（subscribe）发布（publish）机制
+消息订阅（subscribe）：绑定监听
+发布（publish）机制   ： 触发事件，调用，用到按钮需要使用事件的时候使用
+
+使用这个机制需要一个PubSub-js的库 地址 ：https://github.com/mroderick/PubSubJS
+
+1:下载
+npm install --save pubsub-js

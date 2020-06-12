@@ -33,3 +33,17 @@ code {
   /* right: 0; */
   float: right;
 }
+.ul{
+  width: 100%;
+}
+.li{
+  width: 20%;
+  height: 200px;
+  margin-bottom: 40px;
+  float: left;
+  list-style: none;
+}
+.li img{
+  width: 100%;
+  height: 100%;
+}
