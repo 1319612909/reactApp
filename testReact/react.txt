@@ -56,3 +56,62 @@ https://developer.github.com/v3/#
 
 1:下载
 npm install --save pubsub-js
+
+*redux
+
+
+https://reacttraining.com/react-router/web/guides/quick-start
+react-router ，基于jquery库
+
+<BrowserRouter>不带#
+<HashRouter>带#
+<Route>     路由
+<Redirect> 重定向
+ <Link>	   路由链接
+ <NavLink> 导航路由链接
+<Switch>	   交换切换
+路由组件和非路由组件分开写，
+在index.js的render()中要修改渲染标签如下
+
+//使用router管理整个app
+ReactDOM.render(
+  (
+    <BrowserRouter>
+      <App />
+    </BrowserRouter> 
+  ),
+  document.getElementById('root')
+);
+
+
+使用: 1：在需要跳转的按钮或者标签地方使用' <NavLink className="nav" to="/about" activeClassName="selected" >about</NavLink> '
+activeClassName="selected" ，设置这个属性代表点击选中后有selected的样式
+
+
+在需要切换的区域，
+  <Switch>
+           <Route path='/about' component={About} />
+           <Route path='/Home' component={Home} />
+           <Redirect to='/about'></Redirect>
+ </Switch> 
+把对应的组件引入后，使用route，绑上path值，component值，用switch标签包裹起来，来决定点击切换对应显示那个组件
+redirect 组件是决定初始化显示那个组件
+
+像路由组件传递参数
+1：通过路由组件链接来传递数据，关键点在：id占位符，route组件上保留占位符才可以
+ <NavLink to={`/home/message/${m.id}`} >{m.title}</NavLink>
+  :id,这个是传递过来的参数，占位符和标识符，最好和NavLink 里面的申明id保持一致
+ <Route path='/home/message/:id'' /> 
+
+ui库
+material-ui
+ant-design   https://mobile.ant.design/index-cn
+
+
+ <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
+  <script>,这个库是为了解决移动端的点击没有300秒的延迟
+
+ant-design  ：可按需加载对应组件
+1：下载2包
+npm install react-app-rewired customize-cra --save-dev
+npm install babel-plugin-import --save-dev
