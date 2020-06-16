@@ -39,7 +39,7 @@ Fetch，老版浏览器不支持，为了兼容，可以引入fetch.js
 
 //github接口地址
 https://developer.github.com/v3/#   
-
+1:下载 axios
 
 发请求要在哪儿更新状态，就最好在哪个组件内发请求，操作state就方便一些
 
@@ -59,7 +59,7 @@ npm install --save pubsub-js
 
 *redux
 
-
+1：下载react-route
 https://reacttraining.com/react-router/web/guides/quick-start
 react-router ，基于jquery库
 
@@ -74,6 +74,7 @@ react-router ，基于jquery库
 在index.js的render()中要修改渲染标签如下
 
 //使用router管理整个app
+
 ReactDOM.render(
   (
     <BrowserRouter>
@@ -106,7 +107,7 @@ redirect 组件是决定初始化显示那个组件
 ui库
 material-ui
 ant-design   https://mobile.ant.design/index-cn
-
+1：下载ant-design
 
  <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
   <script>,这个库是为了解决移动端的点击没有300秒的延迟
@@ -115,3 +116,50 @@ ant-design  ：可按需加载对应组件
 1：下载2包
 npm install react-app-rewired customize-cra --save-dev
 npm install babel-plugin-import --save-dev
+2：在page.json文件夹中修改scripts
+"scripts": {
+ "start": "react-app-rewired start",
+ "build": "react-app-rewired build",
+ "test": "react-app-rewired test --env=jsdom",
+}
+3:根目录下新建一个 config-overrides.js 文件，内容为
+const { override, fixBabelImports } = require('customize-cra');
+
+module.exports = override(
+    fixBabelImports('import', {
+     libraryName: 'antd-mobile',
+     style: 'css',
+     }),
+   );
+
+
+redux
+1：redux是一个专门用于做状态管理的js库（不是react插件库）
+2：他的作用在react,angular,vue等项目中，但基本与react配合使用
+3：作用：集中式管理react应用中多个组件共享的状态
+
+1:下载redux
+npm install --save redux
+
+ 使用：1：在index.js中引入对应的
+import  {counter} from './components/redux/reducres':
+2：创建store对象
+const store = createStore(counter)
+ 3：在app组件上传递到app里面
+<App store={store}/>
+4：在app的组件内得到store
+const {count} = this.props.store
+
+
+为了解决redux的耦合性使用react-redux    https://www.redux.org.cn/docs/react-redux/
+1:下载
+ npm install --save react-redux
+
+
+容器组件和ui组件
+容器组件，包装UI组件
+export default connect(
+    state =>({count:state}),{
+        increment:actions.increment,decrement:actions.decrement
+    }
+)(reduxApp)

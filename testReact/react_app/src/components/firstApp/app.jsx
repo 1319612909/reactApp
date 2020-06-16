@@ -13,5 +13,4 @@ export default class firstApp extends Component{
             </div>
         )
     }
-    
 }

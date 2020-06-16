@@ -5,6 +5,7 @@ import Search from './search/app'
 import SearchSub from './search_pubsub/app'
 import RoterApp from './router/app'
 import FirstApp from './firstApp/app'
+import ReduxApp from './firstApp/testRedux'
 export default class App extends Component{
     render(){
         return(
@@ -12,7 +13,8 @@ export default class App extends Component{
             // <Search />
             // <SearchSub />
             // <RoterApp />
-            <FirstApp/>
+            // <FirstApp/>
+            <ReduxApp />
         )
     }
 }
