@@ -37,6 +37,14 @@ Fetch，老版浏览器不支持，为了兼容，可以引入fetch.js
 使用它 请求后，要。then（ return res.json()）.then
 通过一次的res.json的转换，返回promise对象，才能拿到数据
 
+react脚手架
+npm install -g create-react-app
+create-react-app my-app my-app
+npm statr
+
+查看npm下载了那些包命令 
+npm root -g
+
 //github接口地址
 https://developer.github.com/v3/#   
 1:下载 axios
@@ -62,6 +70,7 @@ npm install --save pubsub-js
 1：下载react-route
 https://reacttraining.com/react-router/web/guides/quick-start
 react-router ，基于jquery库
+npm install --save react-router-dom
 
 <BrowserRouter>不带#
 <HashRouter>带#
@@ -106,7 +115,9 @@ redirect 组件是决定初始化显示那个组件
 
 ui库
 material-ui
-ant-design   https://mobile.ant.design/index-cn
+ant-design 
+https://ant.design/docs/react/introduce-cn  //pc 
+ https://mobile.ant.design/index-cn      //app
 1：下载ant-design
 
  <script src="https://as.alipayobjects.com/g/component/fastclick/1.0.6/fastclick.js"></script>
@@ -163,3 +174,15 @@ export default connect(
         increment:actions.increment,decrement:actions.decrement
     }
 )(reduxApp)
+
+
+目录结构
+src下面的
+api : ajax请求相关模块文件夹
+assets 公用资源文件夹
+components: ui组件模块文件夹
+containers : 容器组件模块文件夹
+redux ：redux相关模块文件夹
+utils 工具模块文件夹
+index.js  入口js
+
