@@ -16,6 +16,7 @@ import store    from './components/redux/store'
 // 移动端需要引入的
 // import 'antd-mobile/dist/antd-mobile.css';    //r如果配置了按需加入，就可以不需要引入这个css
 
+
 // 正常app组件
 // ReactDOM.render(
 //   <React.StrictMode>
